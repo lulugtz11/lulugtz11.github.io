@@ -1,49 +1,159 @@
-<style>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Lulú Gutiérrez - Portfolio</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
     :root {
-        --main-color: #D85D8B; /* El rosa que elegiste */
+      --main-color: #D85D8B;
     }
-
-    .profile-container {
-        display: flex;
-        justify-content: space-between;
-        gap: 40px;
+    body {
+      font-family: 'Arial', sans-serif;
     }
-
-    .profile-info {
-        flex: 1;
+    #hero {
+      height: 100vh;
+      background: url('assets/img/hero.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
     }
-
-    .profile-info p {
-        margin: 8px 0;
-        font-size: 16px;
+    #hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
     }
-
-    .about-me {
-        flex: 1;
+    #hero h2 {
+      font-size: 2rem;
     }
-
-    .about-me h2 {
-        border-bottom: 3px solid var(--main-color);
-        display: inline-block;
-        padding-bottom: 5px;
-        margin-bottom: 15px;
+    .title {
+      color: var(--main-color);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
     }
-</style>
+    .img-grid img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    footer {
+      background: #111;
+      padding: 15px;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
 
-<div class="profile-container">
-    <div class="profile-info">
-        <img src="" alt="Tu foto aquí" style="width:100%; border-radius: 10px;">
+<body>
 
-        <p><strong>Name:</strong> Lourdes Angélica Gutiérrez Landa</p>
-        <p><strong>Profile:</strong> Estudiante de Ciencia de Datos y Actuaría en el ITAM</p>
-        <p><strong>Email:</strong> lgutie41@itam.mx</p>
+  <!-- NAV -->
+  <nav class="navbar fixed-top navbar-dark bg-dark px-3">
+    <a class="navbar-brand fw-bold" href="#">Lulú Gutiérrez</a>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div>
+      <h1>Lulú Gutiérrez</h1>
+      <h2>Estudiante de Ciencia de Datos y Actuaría </h2>
+    </div>
+  </section>
+
+  <!-- SOBRE MI -->
+  <section class="container py-5" id="about">
+    <h2 class="title">Sobre mí</h2>
+    <div class="row align-items-center">
+      <div class="col-md-5">
+        <img src="assets/img/about.jpg" class="img-fluid rounded">
+      </div>
+      <div class="col-md-7">
+        <p>
+          Soy una estudiante de Ciencia de Datos y Actuaría en el ITAM. Soy originaria de la CDMX.
+          Mi deporte favorito es el tenis y me encantan los perros. También tengo una
+          adicción a las bebidas con tapioca 🧋💌.
+        </p>
+        <p>
+          Estoy interesada en formar parte de proyectos de impacto social, sobre todo en temas
+          de educación, género, medio ambiente o cualquier cosa que haga el mundo un poquito más justo ✨.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACADEMIA + PROYECTOS -->
+  <section class="container py-5" id="projects">
+    <h2 class="title">Trayectoria académica</h2>
+    <ul>
+      <li> Primaria — Colegio Anglo Americano</li>
+      <li> Secundaria — Albert College Canadá</li>
+      <li> Preparatoria — Tecnológico de Monterrey</li>
+      <li> Universidad — ITAM</li>
+    </ul>
+
+    <h2 class="title mt-5">Proyectos</h2>
+    <div class="row text-center">
+      <div class="col-md-6 mb-4">
+        <img src="assets/img/proyecto1.png" class="img-fluid rounded">
+        <p> 1. Análisis de embarazos adolescentes</p>
+      </div>
+      <div class="col-md-6 mb-4">
+        <img src="assets/img/proyecto2.png" class="img-fluid rounded">
+        <p> 2. Acceso a hospitales (Chiapas y Yucatán)</p>
+      </div>
+      <div class="col-md-6 mb-4">
+        <img src="assets/img/proyecto3.png" class="img-fluid rounded">
+        <p> 3. Movilidad — Línea 1 del Metrobús</p>
+      </div>
+      <div class="col-md-6 mb-4">
+        <img src="assets/img/proyecto4.png" class="img-fluid rounded">
+        <p> 4. Violencia y subregistro de muertes CDMX</p>
+      </div>
     </div>
 
-    <div class="about-me">
-        <h2>Sobre mí</h2>
-        <p>Soy originaria de la CDMX. Mi deporte favorito es el tenis y me encantan los perros, tengo 3.</p>
-        <p>También tengo una adicción a las bebidas con tapioca 🧋💌.</p>
-        <p>Estoy interesada en formar parte de proyectos de impacto social, sobre todo en temas de educación, género, medio ambiente o cualquier cosa que haga el mundo un poquito más justo.</p>
+    <h3 class="title">Extra ✨</h3>
+    <ul>
+      <li> Servicio social en ITAM Construye enseñando matemáticas</li>
+      <li> Representación de Ciencia de Datos — AlphaData</li>
+    </ul>
+
+    <h3 class="title">Herramientas 🔧</h3>
+    <p>LaTeX · Python · Java · R · Docker · Github · SQL · MongoDB · Office</p>
+
+    <h3 class="title">Habilidades 💡</h3>
+    <p>Comunicación · Trabajo en equipo · Empatía · Organización · Dedicación</p>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="container py-5" id="reviews">
+    <h2 class="title">Review: Mejores luagres para tomar té con tapioca </h2>
+    <img src="assets/img/tapiocas.jpg" class="img-fluid rounded mb-4">
+
+    <ul>
+      <li><b>Sha Sha ⭐⭐⭐⭐⭐</b> — No es tan conocido, soy muy amables servicio, sabores simples pero ricos</li>
+      <li><b>GongCha ⭐⭐⭐⭐</b> — Nunca falle, muchas sucursales, muchos sabores saben igual </li>
+      <li><b>Zoma Tea ⭐⭐⭐⭐</b> — Negocio mexicano, mucha variedad, pocas sucursales</li>
+      <li><b>Hi Tea ⭐⭐⭐</b> — Tienen bebidas de 2L, atención medio mala</li>
+      <li><b>Cassava Roots ⭐⭐</b> — Nunca se modernizan, su menú no es bueno </li>
+    </ul>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="container py-5" id="gallery">
+    <h2 class="title">Fotos ✨</h2>
+    <div class="row img-grid">
+      <div class="col-6 col-md-3"><img src="assets/img/wimbledon.jpg"></div>
+      <div class="col-6 col-md-3"><img src="assets/img/construye.jpg"></div>
+      <div class="col-6 col-md-3"><img src="assets/img/familia.jpg"></div>
+      <div class="col-6 col-md-3"><img src="assets/img/perrito.jpg"></div>
     </div>
-</div>
+  </section>
+
+  <footer>Hecho con 💖 por Lulú Gutiérrez</footer>
+
+</body>
+</html>
 
