@@ -2,235 +2,362 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lulú Gutiérrez</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lulú Gutiérrez</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-        :root {
-            --main-color: #D85D8B;
-        }
+  <style>
+    :root {
+      --main-color: #D85D8B;
+    }
 
-        body {
-            font-family: 'Segoe UI', sans-serif;
-        }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding-top: 70px;
+    }
 
-        /* Navbar */
-        .navbar {
-            background-color: white !important;
-        }
+    /* Navbar */
+    .navbar {
+      background-color: #ffffff !important;
+    }
 
-        .nav-link.active,
-        .nav-link:hover {
-            color: var(--main-color) !important;
-        }
+    .navbar-brand {
+      color: var(--main-color) !important;
+      font-weight: 700;
+    }
 
-  
-        #hero {
-            background: url("hero.jpg") center/cover no-repeat;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            padding: 20px;
-            position: relative;
-        }
+    .nav-link.active,
+    .nav-link:hover {
+      color: var(--main-color) !important;
+    }
 
-        #hero h1 {
-            font-size: 3.2rem;
-            font-weight: bold;
-            text-shadow: 0 0 10px black;
-        }
+    /* Hero */
+    #hero {
+      background: linear-gradient(to bottom,
+          rgba(0, 0, 0, 0.45),
+          rgba(0, 0, 0, 0.7)),
+        url("hero.jpg") center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
 
-        #hero p {
-            font-size: 1.5rem;
-            text-shadow: 0 0 6px black;
-        }
+    #hero h1 {
+      font-size: 3.2rem;
+      font-weight: bold;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    }
 
-        /* Titles */
-        .title {
-            color: var(--main-color);
-            font-weight: bold;
-            margin-bottom: 25px;
-        }
+    #hero p {
+      font-size: 1.5rem;
+      text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+    }
 
-        /* Projects grid */
-        .project-img {
-            width: 100%;
-            border-radius: 10px;
-            border: 3px solid #eee;
-        }
+    /* Titles */
+    section {
+      scroll-margin-top: 80px;
+    }
 
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-            filter: invert(100%);
-        }
+    .title {
+      color: var(--main-color);
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
 
-        footer {
-            background-color: var(--main-color);
-            color: white;
-            padding: 15px 0;
-        }
-    </style>
+    /* Projects grid */
+    .project-img {
+      width: 100%;
+      border-radius: 10px;
+      border: 3px solid #eee;
+      object-fit: cover;
+    }
+
+    /* Reviews */
+    #reviews .card {
+      border-radius: 16px;
+      border: 1px solid #f1f1f1;
+    }
+
+    .review-logo {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 1px solid #f1f1f1;
+      padding: 6px;
+      margin-bottom: 10px;
+    }
+
+    .review-stars {
+      color: #FFD700;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .review-link {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--main-color);
+      font-weight: 500;
+    }
+
+    .review-link:hover {
+      text-decoration: underline;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: invert(100%);
+    }
+
+    /* Gallery */
+    .gallery-img {
+      width: 100%;
+      border-radius: 12px;
+      border: 3px solid #eee;
+      object-fit: cover;
+    }
+
+    footer {
+      background-color: var(--main-color);
+      color: white;
+      padding: 15px 0;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#" style="color: var(--main-color);">Lulú  ✨</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#hero">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Trayectoria & Proyectos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#reviews">Tapiocas 🍹</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#gallery">Fotos 📸</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- HERO -->
-    <section id="hero">
-        <div>
-            <h1>Lulú Gutiérrez</h1>
-            <p>Estudiante de Ciencia de Datos y Actuaría</p>
-        </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="container py-5" id="about">
-        <h2 class="title">Sobre mí</h2>
-        <div class="row align-items-center g-4">
-            <div class="col-md-4">
-                <img src="about.jpg" class="img-fluid rounded shadow" alt="Foto de Lulu">
-            </div>
-            <div class="col-md-8">
-                <p>
-                    Soy una estudiante de Ciencia de Datos y Actuaría en el ITAM. Soy originaria de la CDMX.
-                    Mi deporte favorito es el tenis y me encnatnan los perros.  
-                </p>
-                <p>
-                    Estoy interesada en formar parte de proyectos de impacto social,
-                    sobre todo en temas de educación, género, medio ambiente o cualquier cosa que haga
-                    el mundo un poquito más justo ✨
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJECTS / TRAYECTORIA -->
-    <section class="container py-5" id="projects">
-        <h2 class="title">Trayectoria Académica</h2>
-        <ul>
-            <li>Primaria → Colegio Anglo Americano</li>
-            <li>Secundaria → Albert College, Canadá</li>
-            <li>Preparatoria → TEC</li>
-            <li>Universidad → ITAM </li>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#hero">Lulú ✨</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#hero">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Trayectoria & Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviews">Review</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Fotos </a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
         </ul>
+      </div>
+    </div>
+  </nav>
 
-        <h2 class="title mt-5">Proyectos</h2>
+  <!-- HERO -->
+  <section id="hero">
+    <div>
+      <h1>Lulú Gutiérrez</h1>
+      <p>Estudiante de Ciencia de Datos y Actuaría</p>
+    </div>
+  </section>
 
-        <div class="row text-center g-3">
-            <div class="col-md-6"><img src="proyecto1.png" class="project-img"> <p>Embarazos adolescentes</p></div>
-            <div class="col-md-6"><img src="proyecto2.png" class="project-img"> <p>Acceso a hospitales</p></div>
-            <div class="col-md-6"><img src="proyecto3.png" class="project-img"> <p>Movilidad CDMX</p></div>
-            <div class="col-md-6"><img src="proyecto4.png" class="project-img"> <p>Violencia y subregistro</p></div>
+  <!-- ABOUT -->
+  <section class="container py-5" id="about">
+    <h2 class="title">Sobre mí</h2>
+    <div class="row align-items-center g-4">
+      <div class="col-md-4">
+        <img src="about.jpg" class="img-fluid rounded shadow" alt="Foto de Lulú">
+      </div>
+      <div class="col-md-8">
+        <p>
+          Soy una estudiante de Ciencia de Datos y Actuaría en el ITAM. Soy originaria de la CDMX.
+          Mi deporte favorito es el tenis y me encantan los perros.
+        </p>
+        <p>
+          Estoy interesada en formar parte de proyectos de impacto social, sobre todo en temas de educación,
+          género, medio ambiente o cualquier cosa que haga el mundo un poquito más justo ✨.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS / TRAYECTORIA -->
+  <section class="container py-5" id="projects">
+    <h2 class="title">Trayectoria académica</h2>
+    <ul>
+      <li>Primaria → Colegio Anglo Americano</li>
+      <li>Secundaria → Albert College, Canadá</li>
+      <li>Preparatoria → TEC</li>
+      <li>Universidad → ITAM (Ciencia de Datos y Actuaría)</li>
+    </ul>
+
+    <h2 class="title mt-5">Proyectos</h2>
+
+    <div class="row text-center g-3">
+      <div class="col-md-6">
+        <img src="proyecto1.png" class="project-img" alt="Mapa embarazos adolescentes">
+        <p class="mt-2"><strong>1. Análisis de embarazos adolescentes</strong><br>con brecha de edad con el padre.</p>
+      </div>
+      <div class="col-md-6">
+        <img src="proyecto2.png" class="project-img" alt="Mapa acceso hospitales">
+        <p class="mt-2"><strong>2. Evaluación del tiempo real de acceso a hospitales</strong><br>en zonas rurales de
+          Chiapas y Yucatán.</p>
+      </div>
+      <div class="col-md-6">
+        <img src="proyecto3.png" class="project-img" alt="Gráfica movilidad Metrobús">
+        <p class="mt-2"><strong>3. Análisis de la movilidad en la CDMX</strong><br>en específico la Línea 1 del
+          Metrobús.</p>
+      </div>
+      <div class="col-md-6">
+        <img src="proyecto4.png" class="project-img" alt="Gráfica subregistro de muertes">
+        <p class="mt-2"><strong>4. Estudio del subregistro y mala clasificación de muertes</strong><br>que distorsionan
+          las cifras de violencia en la CDMX desde 2018.</p>
+      </div>
+    </div>
+
+    <h3 class="title mt-5">Extra </h3>
+    <ul>
+      <li>Hice mi servicio social en <strong>ITAM Construye</strong> dando clases de matemáticas a niños de primaria.
+      </li>
+      <li>Fui parte de la representación de Ciencia de Datos, <strong>AlphaData</strong>.</li>
+    </ul>
+
+    <h3 class="title mt-4">Herramientas</h3>
+    <p>LaTeX · Python · Java · R · Docker · GitHub · SQL · MongoDB · Paquetería de Office</p>
+
+    <h3 class="title mt-4">Habilidades</h3>
+    <p>Comunicación · Trabajo en equipo · Empatía e interés social · Organización · Dedicación</p>
+  </section>
+
+  <!-- REVIEWS CARRUSEL -->
+  <section class="container py-5" id="reviews">
+    <h2 class="title">Reviews de lugares para tomar tapioca 🧋</h2>
+    <img src="tapiocas.jpg" class="img-fluid rounded mb-4" alt="Bebidas de tapioca">
+
+    <div id="tapiocaCarousel" class="carousel slide">
+      <div class="carousel-inner">
+
+        <!-- Sha Sha -->
+        <div class="carousel-item active">
+          <div class="card p-3 shadow-sm text-center mx-auto" style="max-width: 480px;">
+            <img src="logo-shasha.png" class="review-logo" alt="Logo Sha Sha">
+            <h3 class="mb-1">Sha sha</h3>
+            <div class="review-stars">★★★★★</div>
+            <ul class="list-unstyled mb-2">
+              <li>No es tan conocido</li>
+              <li>Son muy amables</li>
+              <li>Sabores medio básicos pero buenos</li>
+            </ul>
+            <a href="https://share.google/weWN5RR9Iu7ao4b3Y" target="_blank" class="review-link">Ver ubicación</a>
+          </div>
         </div>
 
-        <h3 class="title mt-5">Extras </h3>
-        <ul>
-            <li>Servicio social en ITAM Construye: daba clases de matemáticas a niños de primaria</li>
-            <li>Representación de Ciencia de Datos: AlphaData </li>
-        </ul>
-
-        <h3 class="title mt-4">Herramientas</h3>
-        <p>Python · R · SQL · Java · Docker · MongoDB · LaTeX · GitHub · Office</p>
-
-        <h3 class="title mt-4">Habilidades</h3>
-        <p>Comunicación · Trabajo en equipo · Empatía · Organización · Dedicación</p>
-    </section>
-
-    <!-- REVIEWS CARRUSEL -->
-    <section class="container py-5" id="reviews">
-        <h2 class="title">Review de lugares para tomar Tapioca 🧋💌</h2>
-        <img src="tapiocas.jpg" class="img-fluid rounded mb-4">
-
-        <div id="tapiocaCarousel" class="carousel slide">
-            <div class="carousel-inner">
-
-                <div class="carousel-item active">
-                    <div class="card p-3 shadow">
-                        <h3>Sha Sha ★★★★★</h3>
-                        <ul><li>No es tan conocido</li><li>Son muy amables</li><li>Sabores básicos pero buenos</li></ul>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="card p-3 shadow">
-                        <h3>GongCha ★★★★☆</h3>
-                        <ul><li>Confiable</li><li>Tienen muchos locales</li><li>Luego son repetitivos los sabores</li></ul>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="card p-3 shadow">
-                        <h3>Zoma Tea ★★★★☆</h3>
-                        <ul><li>Apoyas negocio mexicano </li><li>Mucha variedad</li><li>Pocos locales</li></ul>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="card p-3 shadow">
-                        <h3>Hi Tea ★★★☆☆</h3>
-                        <ul><li>Hay tés de 2 litros</li><li>A veces mala atención</li></ul>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="card p-3 shadow">
-                        <h3>Cassava Roots ★★☆☆☆</h3>
-                        <ul><li>Siempre lo mismo, no modernizan su menú</li><li>Ya me hartaron</li></ul>
-                    </div>
-                </div>
-
-            </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#tapiocaCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#tapiocaCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
+        <!-- GongCha -->
+        <div class="carousel-item">
+          <div class="card p-3 shadow-sm text-center mx-auto" style="max-width: 480px;">
+            <img src="logo-gongcha.png" class="review-logo" alt="Logo GongCha">
+            <h3 class="mb-1">GongCha</h3>
+            <div class="review-stars">★★★★☆</div>
+            <ul class="list-unstyled mb-2">
+              <li>Confiable, hay en muchos lugares</li>
+              <li>Se siente que todos los sabores son los mismos</li>
+              <li>Inflaron sus precios pero te dan bebidas gratis a veces</li>
+            </ul>
+            <a href="https://share.google/R8OVoLhvQM0I5ZFDB" target="_blank" class="review-link">Ver ubicación</a>
+          </div>
         </div>
-    </section>
 
-    <!-- GALLERY -->
-    <section class="container py-5 text-center" id="gallery">
-        <h2 class="title">Fotos</h2>
-        <div class="row g-3">
-            <div class="col-md-6"><img src="wimbledon.jpg" class="project-img"></div>
-            <div class="col-md-6"><img src="construye.jpg" class="project-img"></div>
-            <div class="col-md-6"><img src="familia.jpg" class="project-img"></div>
-            <div class="col-md-6"><img src="perrito.jpg" class="project-img"></div>
+        <!-- Zoma Tea -->
+        <div class="carousel-item">
+          <div class="card p-3 shadow-sm text-center mx-auto" style="max-width: 480px;">
+            <img src="logo-zomatea.png" class="review-logo" alt="Logo Zoma Tea">
+            <h3 class="mb-1">Zoma Tea</h3>
+            <div class="review-stars">★★★★☆</div>
+            <ul class="list-unstyled mb-2">
+              <li>Apoyas negocio mexicano</li>
+              <li>Tienen mucha variedad</li>
+              <li>No hay tantas sucursales</li>
+            </ul>
+            <a href="https://share.google/v3Om6RN0ktgvwe79Z" target="_blank" class="review-link">Ver ubicación</a>
+          </div>
         </div>
-    </section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Hi Tea -->
+        <div class="carousel-item">
+          <div class="card p-3 shadow-sm text-center mx-auto" style="max-width: 480px;">
+            <img src="logo-hitea.png" class="review-logo" alt="Logo Hi Tea">
+            <h3 class="mb-1">Hi Tea</h3>
+            <div class="review-stars">★★★☆☆</div>
+            <ul class="list-unstyled mb-2">
+              <li>Tienen bebidas de 2 litros</li>
+              <li>A veces no son muy amables</li>
+            </ul>
+            <a href="https://share.google/jdil25oAq1CVgLVFU" target="_blank" class="review-link">Ver ubicación</a>
+          </div>
+        </div>
 
+        <!-- Cassava Roots -->
+        <div class="carousel-item">
+          <div class="card p-3 shadow-sm text-center mx-auto" style="max-width: 480px;">
+            <img src="logo-cassava.png" class="review-logo" alt="Logo Cassava Roots">
+            <h3 class="mb-1">Cassava Roots</h3>
+            <div class="review-stars">★★☆☆☆</div>
+            <ul class="list-unstyled mb-2">
+              <li>Nunca se modernizan, siempre lo mismo</li>
+              <li>Ya me hartaron </li>
+            </ul>
+            <a href="https://share.google/eidxrQR74o1d5fti4" target="_blank" class="review-link">Ver ubicación</a>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#tapiocaCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#tapiocaCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="container py-5 text-center" id="gallery">
+    <h2 class="title">Galería</h2>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <img src="wimbledon.jpg" class="gallery-img" alt="Lulú en Wimbledon">
+      </div>
+      <div class="col-md-6">
+        <img src="construye.jpg" class="gallery-img" alt="Lulú en ITAM Construye">
+      </div>
+      <div class="col-md-6">
+        <img src="familia.jpg" class="gallery-img" alt="Lulú con su familia">
+      </div>
+      <div class="col-md-6">
+        <img src="perrito.jpg" class="gallery-img" alt="Lulú con su perrito">
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="container py-5" id="contact">
+    <h2 class="title">Contacto</h2>
+    <p><strong>Nombre:</strong> Lourdes Angélica Gutiérrez Landa</p>
+    <p><strong>Correo:</strong> <a href="mailto:lgutie41@itam.mx">lgutie41@itam.mx</a></p>
+  </section>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
 
 </html>
 
