@@ -1,159 +1,236 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <title>Lulú Gutiérrez - Portfolio</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <style>
-    :root {
-      --main-color: #D85D8B;
-    }
-    body {
-      font-family: 'Arial', sans-serif;
-    }
-    #hero {
-      height: 100vh;
-      background: url('assets/img/hero.jpg') center/cover no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-    }
-    #hero h1 {
-      font-size: 4rem;
-      font-weight: 700;
-    }
-    #hero h2 {
-      font-size: 2rem;
-    }
-    .title {
-      color: var(--main-color);
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-    }
-    .img-grid img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-    footer {
-      background: #111;
-      padding: 15px;
-      color: white;
-      text-align: center;
-    }
-  </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lulú Gutiérrez</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --main-color: #D85D8B;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: white !important;
+        }
+
+        .nav-link.active,
+        .nav-link:hover {
+            color: var(--main-color) !important;
+        }
+
+  
+        #hero {
+            background: url("hero.jpg") center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            position: relative;
+        }
+
+        #hero h1 {
+            font-size: 3.2rem;
+            font-weight: bold;
+            text-shadow: 0 0 10px black;
+        }
+
+        #hero p {
+            font-size: 1.5rem;
+            text-shadow: 0 0 6px black;
+        }
+
+        /* Titles */
+        .title {
+            color: var(--main-color);
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        /* Projects grid */
+        .project-img {
+            width: 100%;
+            border-radius: 10px;
+            border: 3px solid #eee;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: invert(100%);
+        }
+
+        footer {
+            background-color: var(--main-color);
+            color: white;
+            padding: 15px 0;
+        }
+    </style>
 </head>
 
 <body>
 
-  <!-- NAV -->
-  <nav class="navbar fixed-top navbar-dark bg-dark px-3">
-    <a class="navbar-brand fw-bold" href="#">Lulú Gutiérrez</a>
-  </nav>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#" style="color: var(--main-color);">Lulú  ✨</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#hero">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Trayectoria & Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reviews">Tapiocas 🍹</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Fotos 📸</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div>
-      <h1>Lulú Gutiérrez</h1>
-      <h2>Estudiante de Ciencia de Datos y Actuaría </h2>
-    </div>
-  </section>
+    <!-- HERO -->
+    <section id="hero">
+        <div>
+            <h1>Lulú Gutiérrez</h1>
+            <p>Estudiante de Ciencia de Datos y Actuaría</p>
+        </div>
+    </section>
 
-  <!-- SOBRE MI -->
-  <section class="container py-5" id="about">
-    <h2 class="title">Sobre mí</h2>
-    <div class="row align-items-center">
-      <div class="col-md-5">
-        <img src="assets/img/about.jpg" class="img-fluid rounded">
-      </div>
-      <div class="col-md-7">
-        <p>
-          Soy una estudiante de Ciencia de Datos y Actuaría en el ITAM. Soy originaria de la CDMX.
-          Mi deporte favorito es el tenis y me encantan los perros. También tengo una
-          adicción a las bebidas con tapioca 🧋💌.
-        </p>
-        <p>
-          Estoy interesada en formar parte de proyectos de impacto social, sobre todo en temas
-          de educación, género, medio ambiente o cualquier cosa que haga el mundo un poquito más justo ✨.
-        </p>
-      </div>
-    </div>
-  </section>
+    <!-- ABOUT -->
+    <section class="container py-5" id="about">
+        <h2 class="title">Sobre mí</h2>
+        <div class="row align-items-center g-4">
+            <div class="col-md-4">
+                <img src="about.jpg" class="img-fluid rounded shadow" alt="Foto de Lulu">
+            </div>
+            <div class="col-md-8">
+                <p>
+                    Soy una estudiante de Ciencia de Datos y Actuaría en el ITAM. Soy originaria de la CDMX.
+                    Mi deporte favorito es el tenis y me encnatnan los perros.  
+                </p>
+                <p>
+                    Estoy interesada en formar parte de proyectos de impacto social,
+                    sobre todo en temas de educación, género, medio ambiente o cualquier cosa que haga
+                    el mundo un poquito más justo ✨
+                </p>
+            </div>
+        </div>
+    </section>
 
-  <!-- ACADEMIA + PROYECTOS -->
-  <section class="container py-5" id="projects">
-    <h2 class="title">Trayectoria académica</h2>
-    <ul>
-      <li> Primaria — Colegio Anglo Americano</li>
-      <li> Secundaria — Albert College Canadá</li>
-      <li> Preparatoria — Tecnológico de Monterrey</li>
-      <li> Universidad — ITAM</li>
-    </ul>
+    <!-- PROJECTS / TRAYECTORIA -->
+    <section class="container py-5" id="projects">
+        <h2 class="title">Trayectoria Académica</h2>
+        <ul>
+            <li>Primaria → Colegio Anglo Americano</li>
+            <li>Secundaria → Albert College, Canadá</li>
+            <li>Preparatoria → TEC</li>
+            <li>Universidad → ITAM </li>
+        </ul>
 
-    <h2 class="title mt-5">Proyectos</h2>
-    <div class="row text-center">
-      <div class="col-md-6 mb-4">
-        <img src="assets/img/proyecto1.png" class="img-fluid rounded">
-        <p> 1. Análisis de embarazos adolescentes</p>
-      </div>
-      <div class="col-md-6 mb-4">
-        <img src="assets/img/proyecto2.png" class="img-fluid rounded">
-        <p> 2. Acceso a hospitales (Chiapas y Yucatán)</p>
-      </div>
-      <div class="col-md-6 mb-4">
-        <img src="assets/img/proyecto3.png" class="img-fluid rounded">
-        <p> 3. Movilidad — Línea 1 del Metrobús</p>
-      </div>
-      <div class="col-md-6 mb-4">
-        <img src="assets/img/proyecto4.png" class="img-fluid rounded">
-        <p> 4. Violencia y subregistro de muertes CDMX</p>
-      </div>
-    </div>
+        <h2 class="title mt-5">Proyectos</h2>
 
-    <h3 class="title">Extra ✨</h3>
-    <ul>
-      <li> Servicio social en ITAM Construye enseñando matemáticas</li>
-      <li> Representación de Ciencia de Datos — AlphaData</li>
-    </ul>
+        <div class="row text-center g-3">
+            <div class="col-md-6"><img src="proyecto1.png" class="project-img"> <p>Embarazos adolescentes</p></div>
+            <div class="col-md-6"><img src="proyecto2.png" class="project-img"> <p>Acceso a hospitales</p></div>
+            <div class="col-md-6"><img src="proyecto3.png" class="project-img"> <p>Movilidad CDMX</p></div>
+            <div class="col-md-6"><img src="proyecto4.png" class="project-img"> <p>Violencia y subregistro</p></div>
+        </div>
 
-    <h3 class="title">Herramientas 🔧</h3>
-    <p>LaTeX · Python · Java · R · Docker · Github · SQL · MongoDB · Office</p>
+        <h3 class="title mt-5">Extras </h3>
+        <ul>
+            <li>Servicio social en ITAM Construye: daba clases de matemáticas a niños de primaria</li>
+            <li>Representación de Ciencia de Datos: AlphaData </li>
+        </ul>
 
-    <h3 class="title">Habilidades 💡</h3>
-    <p>Comunicación · Trabajo en equipo · Empatía · Organización · Dedicación</p>
-  </section>
+        <h3 class="title mt-4">Herramientas</h3>
+        <p>Python · R · SQL · Java · Docker · MongoDB · LaTeX · GitHub · Office</p>
 
-  <!-- REVIEWS -->
-  <section class="container py-5" id="reviews">
-    <h2 class="title">Review: Mejores luagres para tomar té con tapioca </h2>
-    <img src="assets/img/tapiocas.jpg" class="img-fluid rounded mb-4">
+        <h3 class="title mt-4">Habilidades</h3>
+        <p>Comunicación · Trabajo en equipo · Empatía · Organización · Dedicación</p>
+    </section>
 
-    <ul>
-      <li><b>Sha Sha ⭐⭐⭐⭐⭐</b> — No es tan conocido, soy muy amables servicio, sabores simples pero ricos</li>
-      <li><b>GongCha ⭐⭐⭐⭐</b> — Nunca falle, muchas sucursales, muchos sabores saben igual </li>
-      <li><b>Zoma Tea ⭐⭐⭐⭐</b> — Negocio mexicano, mucha variedad, pocas sucursales</li>
-      <li><b>Hi Tea ⭐⭐⭐</b> — Tienen bebidas de 2L, atención medio mala</li>
-      <li><b>Cassava Roots ⭐⭐</b> — Nunca se modernizan, su menú no es bueno </li>
-    </ul>
-  </section>
+    <!-- REVIEWS CARRUSEL -->
+    <section class="container py-5" id="reviews">
+        <h2 class="title">Review de lugares para tomar Tapioca 🧋💌</h2>
+        <img src="tapiocas.jpg" class="img-fluid rounded mb-4">
 
-  <!-- GALERÍA -->
-  <section class="container py-5" id="gallery">
-    <h2 class="title">Fotos ✨</h2>
-    <div class="row img-grid">
-      <div class="col-6 col-md-3"><img src="assets/img/wimbledon.jpg"></div>
-      <div class="col-6 col-md-3"><img src="assets/img/construye.jpg"></div>
-      <div class="col-6 col-md-3"><img src="assets/img/familia.jpg"></div>
-      <div class="col-6 col-md-3"><img src="assets/img/perrito.jpg"></div>
-    </div>
-  </section>
+        <div id="tapiocaCarousel" class="carousel slide">
+            <div class="carousel-inner">
 
-  <footer>Hecho con 💖 por Lulú Gutiérrez</footer>
+                <div class="carousel-item active">
+                    <div class="card p-3 shadow">
+                        <h3>Sha Sha ★★★★★</h3>
+                        <ul><li>No es tan conocido</li><li>Son muy amables</li><li>Sabores básicos pero buenos</li></ul>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card p-3 shadow">
+                        <h3>GongCha ★★★★☆</h3>
+                        <ul><li>Confiable</li><li>Tienen muchos locales</li><li>Luego son repetitivos los sabores</li></ul>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card p-3 shadow">
+                        <h3>Zoma Tea ★★★★☆</h3>
+                        <ul><li>Apoyas negocio mexicano </li><li>Mucha variedad</li><li>Pocos locales</li></ul>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card p-3 shadow">
+                        <h3>Hi Tea ★★★☆☆</h3>
+                        <ul><li>Hay tés de 2 litros</li><li>A veces mala atención</li></ul>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card p-3 shadow">
+                        <h3>Cassava Roots ★★☆☆☆</h3>
+                        <ul><li>Siempre lo mismo, no modernizan su menú</li><li>Ya me hartaron</li></ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#tapiocaCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#tapiocaCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="container py-5 text-center" id="gallery">
+        <h2 class="title">Fotos</h2>
+        <div class="row g-3">
+            <div class="col-md-6"><img src="wimbledon.jpg" class="project-img"></div>
+            <div class="col-md-6"><img src="construye.jpg" class="project-img"></div>
+            <div class="col-md-6"><img src="familia.jpg" class="project-img"></div>
+            <div class="col-md-6"><img src="perrito.jpg" class="project-img"></div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+</html>
+
 </html>
 
